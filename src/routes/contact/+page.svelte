@@ -26,7 +26,7 @@
         e.preventDefault();
 
         // const res = await fetch("http://localhost:5173/contact", {
-        const res = await fetch("https://ezinore.com/contact", {
+        const res = await fetch("https://www.ezinore.com/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
