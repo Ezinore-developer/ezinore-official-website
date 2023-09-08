@@ -76,42 +76,27 @@ export async function POST(requestEvent: RequestEvent) {
     text: body.message,
   };
 
-  let response;
-  let code;
+  let response = "";
+  let code = 0;
 
-  mailTransporter
-    .sendMail(mailDetails)
-    .then((info) => {
-      console.log("sent");
-      console.log(info);
-      response = info;
-      code = 200;
-
-      return json(
-        { response: response, email: body.email, code: code },
-        { status: code }
-      );
-
-      // console.log()
-    })
-    .catch((err) => {
-      console.log(err);
-      response = err;
-      code = 501;
+  await new Promise((resolve, reject) => {
+    mailTransporter.sendMail(mailDetails, (err, info) => {
+      if (err) {
+        console.log(err);
+        reject(err);
+        response = `${err}`;
+        code = 501;
+        // return json({ err }, { status: 501 });
+      } else {
+        console.log(info);
+        resolve(info);
+        response = `${info.response}`;
+        code = 200;
+        // return json({ info }, { status: 200 });
+      }
     });
+  });
 
-  return json(
-    { response: response, email: body.email, code: code },
-    { status: code }
-  );
+  return json({response, code}, {status : code});
 
-  // mailTransporter.sendMail(mailDetails, function (err: unknown) {
-  //   if (err) {
-  //     console.log("sent");
-  //     return json({}, { status: 501 });
-  //   } else {
-  //     console.log(err);
-  //     return json({}, { status: 200 });
-  //   }
-  // });
 }

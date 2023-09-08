@@ -1,14 +1,8 @@
-
-
 <script lang="ts">
-  import {goto} from '$app/navigation'
+  import { goto } from "$app/navigation";
   let message = "";
   let email = "";
-
-
- 
 </script>
-
 
 <div class="h-full px-20 py-10 grid grid-cols-1 md:grid-cols-2 main gap-10">
   <div class="span-cols-1 w-[100%] flex flex-col mt-10">
@@ -26,20 +20,19 @@
         e.preventDefault();
 
         // const res = await fetch("http://localhost:5173/contact", {
-        const res = await fetch("/contact", {  
+        const res = await fetch("/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({ email, message }),
         });
-
-          console.log(await res.json());
+        const x = await res.json();
+        console.log(x);
         if (res.status === 200) {
-
-          goto("/thankyou?title=ts&subtitle=24")
+          goto("/thankyou?title=ts&subtitle=24");
         } else {
-          goto("/thankyou?title=err&subtitle=goback")
+          goto("/thankyou?title=err&subtitle=goback");
         }
       }}
     >
@@ -83,14 +76,16 @@
   <title>Contact Us</title>
   <meta
     name="ezinore"
-    content="Contact Ezinore to start your sustainable journey today"/>
-    <script type="application/ld+json">
+    content="Contact Ezinore to start your sustainable journey today"
+  />
+  <script type="application/ld+json">
       {
         "@context" : "https://schema.org",
         "@type" : "Organization",
         "name" : "Ezinore",
         "url" : "https://ezinore.com/contact",
-      }</script>
+      }
+  </script>
 </svelte:head>
 
 <style>
