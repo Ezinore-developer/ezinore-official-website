@@ -3,13 +3,15 @@
 
   const title = $page.url.searchParams.get("title");
   const subtitle = $page.url.searchParams.get("subtitle");
+
+  console.table({ title, subtitle });
 </script>
 
 <div class="h-screen flex justify-center items-center">
   {#if title === "ts" && subtitle === "24"}
     <div id="main">
       <h1>Thank you for your query</h1>
-      <br/>
+      <br />
       <h2>We will get back to you within 24h</h2>
       <a href="/" id="button">Back to Home</a>
     </div>

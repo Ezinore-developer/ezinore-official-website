@@ -76,15 +76,34 @@ export async function POST(requestEvent: RequestEvent) {
     text: body.message,
   };
 
+  let response;
+  let code;
+
   mailTransporter
     .sendMail(mailDetails)
     .then((info) => {
       console.log("sent");
       console.log(info);
+      response = info;
+      code = 200;
+
+      return json(
+        { response: response, email: body.email, code: code },
+        { status: code }
+      );
+
+      // console.log()
     })
     .catch((err) => {
       console.log(err);
+      response = err;
+      code = 501;
     });
+
+  return json(
+    { response: response, email: body.email, code: code },
+    { status: code }
+  );
 
   // mailTransporter.sendMail(mailDetails, function (err: unknown) {
   //   if (err) {
@@ -95,6 +114,4 @@ export async function POST(requestEvent: RequestEvent) {
   //     return json({}, { status: 200 });
   //   }
   // });
-
-  return json({ message: "completed email function" });
 }
