@@ -7,7 +7,6 @@
 
   onMount(() => {
     video.play();
-    console.log(time);
   });
 </script>
 
