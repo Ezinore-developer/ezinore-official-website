@@ -1,7 +1,11 @@
+
+
 <script lang="ts">
   import {goto} from '$app/navigation'
   let message = "";
   let email = "";
+
+
  
 </script>
 
@@ -21,7 +25,8 @@
       on:click={async (e) => {
         e.preventDefault();
 
-        const res = await fetch("/contact", {
+        // const res = await fetch("http://localhost:5173/contact", {
+        const res = await fetch("https://ezinore.com/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -29,7 +34,7 @@
           body: JSON.stringify({ email, message }),
         });
 
-        if (res.status == 200) {
+        if (res.status === 200) {
           goto("/thankyou?title=ts&subtitle=24")
         } else {
           goto("/thankyou?title=err&subtitle=goback")
