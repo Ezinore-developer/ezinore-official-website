@@ -24,7 +24,7 @@
     font-size: 2.75rem;
     line-height: 3.375rem;
     text-align: center;
-    color: #000000;
+    color: black;
   }
 
   img{
