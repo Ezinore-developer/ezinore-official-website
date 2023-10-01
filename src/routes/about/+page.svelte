@@ -7,6 +7,12 @@
   import saumya from "$lib/assets/team/saumya.jpg";
   import anshu from "$lib/assets/team/anshu.jpg";
   import nirmal1 from "$lib/assets/team/1.png";
+  import mansi from "$lib/assets/team/mansi.png";
+  import nikhil from "$lib/assets/team/nikhil.png";
+  import rahul from "$lib/assets/team/rahul.png";
+  import rishabh from "$lib/assets/team/rishabh.png";
+  import naina from "$lib/assets/team/naina.png";
+  import vikas from "$lib/assets/team/vikas.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
   import leftArrow from "$lib/assets/left-arrow.png";
@@ -40,17 +46,30 @@
         behavior: "smooth",
         inline: "start",
         block: "nearest",
-      
       });
   }
 
   const team = [
     { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
     { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 1 },
-    
+    { img: nikhil, name: "Nikhil", position: "Product Head", id: 2 },
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 3 },
-    { img: anshu, name: "Anshukanchan Mohanta", position: "3D Designer", id: 4 },
-    // { img: sujal, name: "Sujal", position: "Emdedded Engineer", id: 6},
+    {
+      img: anshu,
+      name: "Anshukanchan Mohanta",
+      position: "3D Designer",
+      id: 4,
+    },
+    { img: mansi, name: "Mansi Kohli", position: "Data Analyst", id: 5 },
+    {
+      img: rahul,
+      name: "Rahul Pachori",
+      position: "Electrical Engineer",
+      id: 6,
+    },
+    { img: rishabh, name: "Rishabh Jain", position: "Cloud Engineer", id: 7 },
+    { img: naina, name: "Naina", position: "HR", id: 8 },
+    { img: vikas, name: "Vikas", position: "Product Designer", id: 9 },
   ];
 </script>
 
@@ -144,14 +163,16 @@
   <title>About Us</title>
   <meta
     name="description"
-    content="We at Ezinore believe in sustainable future aimed towards customer satisfatction through are products and services."/>
-    <script type="application/ld+json">
+    content="We at Ezinore believe in sustainable future aimed towards customer satisfatction through are products and services."
+  />
+  <script type="application/ld+json">
     {
       "@context" : "https://schema.org",
       "@type" : "Organization",
       "name" : "Ezinore",
       "url" : "https://ezinore.com/about",
-    }</script>
+    }
+  </script>
 </svelte:head>
 
 <style>
