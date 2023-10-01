@@ -1,5 +1,5 @@
-#Ezinore Private Limited
+# Ezinore Private Limited
 
-The offifical Website of Ezinore Private Limited
+The official website of ezinore private limited.
 
 Visit www.ezinore.com
