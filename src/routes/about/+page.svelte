@@ -3,11 +3,9 @@
   import k2 from "$lib/assets/aim/a2.png";
   import k3 from "$lib/assets/aim/a3.png";
 
-  import gopal from "$lib/assets/team/gopal.png";
   import rohit from "$lib/assets/team/rohit.png";
   import saumya from "$lib/assets/team/saumya.jpg";
   import anshu from "$lib/assets/team/anshu.jpg";
-  import keshav from "$lib/assets/team/keshav.jpg";
   import nirmal1 from "$lib/assets/team/1.png";
 
   import rightArrow from "$lib/assets/right-arrow.png";
@@ -49,15 +47,9 @@
   const team = [
     { img: nirmal1, name: "Nirmal Yadav", position: "Founder/CEO", id: 0 },
     { img: rohit, name: "Rohit Gorai", position: "Design Head", id: 1 },
-    {
-      img: gopal,
-      name: "Gopal Mathur",
-      position: "Full Stack Developer",
-      id: 2,
-    },
+    
     { img: saumya, name: "Saumya Garg", position: "UI/UX Designer", id: 3 },
     { img: anshu, name: "Anshukanchan Mohanta", position: "3D Designer", id: 4 },
-    { img: keshav, name: "Keshav Singhal", position: "AI/ML Engineer", id: 5 },
     // { img: sujal, name: "Sujal", position: "Emdedded Engineer", id: 6},
   ];
 </script>
