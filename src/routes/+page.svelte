@@ -7,6 +7,7 @@
   import Testimonials from "$lib/components/Testimonials.svelte";
   import Sellingto from "$lib/components/Sellingto.svelte";
   import Faq from "$lib/components/faq.svelte";
+  import Investors from "$lib/components/Investors.svelte";
 </script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,6 +36,7 @@ generation, storage, and management."
 <Services />
 <Sellingto />
 <!-- <Testimonials/> -->
+<Investors/>
 <Faq />
 
 <style>
